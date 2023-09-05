@@ -1,18 +1,18 @@
-function folder_util_test(){
+function folder_util_test_(){
   FolderUtils.create_dir('folder_utils_test/sub1/sub2/sub3');
   FolderUtils.get_or_create_dir('folder_utils_test/sub1/sub2/sub4');
   FolderUtils.get_dir('folder_utils_test/sub1/sub2/sub3');
 }
 
-function folder_util_test_delete() {
+function folder_util_test_delete_() {
   FolderUtils.delete_dir('folder_utils_test/sub1/sub2/sub3');
 }
 
-function folder_util_test_after() {
+function folder_util_test_after_() {
   FolderUtils.delete_dir('folder_utils_test');
 }
 
-function file_util_test(){
+function file_util_test_(){
   FolderUtils.create_dir('file_utils_test');
   FileUtils.create_file('file_utils_test/test_file.txt', DocumentApp);
   FileUtils.create_file('file_utils_test/test_file.xlsx', SpreadsheetApp);
