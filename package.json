@@ -2,5 +2,8 @@
   "dependencies": {
     "@types/google-apps-script": "^1.0.67",
     "typescript": "^5.2.2"
+  },
+  "scripts": {
+    "tsc": ".\\node_modules\\.bin\\tsc"
   }
 }
