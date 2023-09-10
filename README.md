@@ -2,6 +2,11 @@
 
 Google app script用の Google Drive ファイルを扱うラッパーライブラリ
 
+## 必要環境
+
+* nodejs v9.2.0
+* google app script
+
 ## 開発に必要なnpmパッケージ
 
 * clasp
@@ -19,8 +24,9 @@ Google app script用の Google Drive ファイルを扱うラッパーライブ�
  
 ## 準備
 
+1. `npm install` により、npmモジュールをインストール
 1. `clasp login` を実行すること
-2. `npm run init` を実行すること
+1. `npm run init` を実行すること
 
 ## ビルド方法
 
