@@ -17,9 +17,9 @@ const preventThreeShakingPlugin = () => {
   }
 
 export default {
-  input: "./test/index.ts",
+  input: "./test/gas_index.ts",
   output: {
-    dir: "gas",
+    dir: "GasFileUtils",
     format: "esm",
   },
   plugins: [

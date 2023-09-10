@@ -15,11 +15,12 @@
   },
   "homepage": "https://github.com/KentaTsujii/DriveFileUtils#readme",
   "scripts": {
-    "init": "clasp create --rootDir \"./gas\" --type standalone",
+    "init": "clasp create --rootDir \"./GasFileUtils\" --type standalone",
     "build": "tsc && rollup -c",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "push": "tsc && rollup -c && clasp -P ./gas push",
-    "push_test": "tsc && rollup -P ./test -c ./rollup_for_test.config.mjs && clasp push"
+    "push": "npm run build && clasp -P ./GasFileUtils push",
+    "push_test": "tsc && rollup -c ./rollup_for_test.config.mjs && clasp -P ./GasFileUtils push",
+    "open": "clasp -P ./GasFileUtils open"
   },
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.22.15",

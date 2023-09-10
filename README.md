@@ -17,6 +17,11 @@ Google app script用の Google Drive ファイルを扱うラッパーライブ�
 * @rollup/plugin-node-resolve
 * rollup-plugin-gas
  
+## 準備
+
+1. `clasp login` を実行すること
+2. `npm run init` を実行すること
+
 ## ビルド方法
 
 ```bash
@@ -25,8 +30,26 @@ npm run build
 
 ## gasへのアップロード方法
 
-### 準備
+### リリースモジュール
 
 ```bash
-npm run init
+npm run push
+```
+
+### テスト用モジュール
+
+```bash
+npm run push_test
+```
+
+### 発効後プロジェクト確認方法
+
+```bash
+npm run open
+```
+
+または
+
+```bash
+clasp open
 ```
