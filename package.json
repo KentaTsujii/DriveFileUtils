@@ -1,9 +1,37 @@
 {
-  "dependencies": {
-    "@types/google-apps-script": "^1.0.67",
-    "typescript": "^5.2.2"
+  "name": "drivefileutils",
+  "description": "Google app script用の Google Drive ファイルを扱うラッパーライブラリ",
+  "version": "1.0.0",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KentaTsujii/DriveFileUtils.git"
   },
+  "author": "TsujiiKenta",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KentaTsujii/DriveFileUtils/issues"
+  },
+  "homepage": "https://github.com/KentaTsujii/DriveFileUtils#readme",
   "scripts": {
-    "tsc": ".\\node_modules\\.bin\\tsc"
+    "init": "clasp create --rootDir \"./gas\" --type standalone",
+    "build": "tsc && rollup -c",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "push": "tsc && rollup -c && clasp -P ./gas push",
+    "push_test": "tsc && rollup -P ./test -c ./rollup_for_test.config.mjs && clasp push"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.22.15",
+    "@babel/preset-env": "^7.22.15",
+    "@babel/preset-typescript": "^7.22.15",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-node-resolve": "^15.2.1",
+    "rollup-plugin-google-apps-script": "^1.1.11"
+  },
+  "dependencies": {
+    "@types/google-apps-script": "^1.0.68",
+    "rollup-plugin-gas": "^1.0.0",
+    "typescript": "^5.2.2"
   }
 }
